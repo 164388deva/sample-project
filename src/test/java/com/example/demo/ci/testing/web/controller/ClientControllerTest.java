@@ -10,6 +10,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -18,10 +19,12 @@ import org.springframework.test.web.servlet.MockMvc;
 import com.example.demo.ci.domain.model.Client;
 import com.example.demo.ci.service.CreateClientService;
 import com.example.demo.ci.service.exception.ClientNameAlreadyExistsException;
+import com.example.demo.ci.web.controller.ClientController;
 import com.example.demo.ci.web.to.CreateClientRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @RunWith(SpringRunner.class)
+@WebMvcTest(ClientController.class)
 public class ClientControllerTest {
 
     @Autowired
