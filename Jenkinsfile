@@ -3,7 +3,7 @@ pipeline {
 	
 	stages {
 		stage("Build Stage"){
-			echo 'Building Springboot maven project'
+			echo 'Building Springboot Project'
 			sh 'mvn clean package'
 		}
 	}
