@@ -3,8 +3,9 @@ pipeline {
 	
 	stages {
 		stage("Build Stage"){
-			echo 'Building Springboot Project'
-			sh 'mvn clean package'
+			steps {
+				echo 'Building Project'	
+			}
 		}
 	}
 }
