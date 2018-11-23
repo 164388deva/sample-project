@@ -1,3 +1,4 @@
+#!/usr/bin/env groovy
 pipeline {
 	agent any
 	
@@ -7,6 +8,23 @@ pipeline {
 				echo 'Building Project'
 				sh 'mvn clean package'
 			}
+		}
+	}
+	post {
+		always {
+			
+		}
+		success {
+
+		}
+		failure {
+
+		}
+		unstable {
+
+		}
+		changed {
+			
 		}
 	}
 }
